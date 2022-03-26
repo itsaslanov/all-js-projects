@@ -1,0 +1,106 @@
+/*----------  fonts  ----------*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+/*----------  roots  ----------*/
+:root {
+    --font-color: #fff;
+    --ff-primary: 'Roboto', sans-serif;
+    --spacing: 0.1rem;
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a:link {
+    text-decoration: none;
+    opacity: 0.5;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--ff-primary);
+    letter-spacing: var(--spacing);
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+html,
+body {
+    font-size: 22px;
+    font-family: var(--ff-primary);
+    color: var(--font-color);
+    height: 100%;
+    background-color: #ff5500;
+}
+
+/*----------  Container  ----------*/
+.container {
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+    width: 100%;
+}
+
+/*----------  Navbar  ----------*/
+.navbar {
+    padding: 20px;
+}
+
+/*----------  Main  ----------*/
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 2 2 auto;
+}
+
+.main .colors {
+    font-size: 50px;
+    font-weight: 100;
+    letter-spacing: var(--spacing);
+    text-transform: uppercase;
+    text-align: center;
+  
+}
+
+/*----------  Footer  ----------*/
+.footer {
+    padding: 20px;
+}
+
+.footer .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar li {
+    margin-left: 10px;
+}
+
+.navbar li a {
+    text-transform: uppercase;
+    color: var(--font-color);
+}
+
+a:hover,
+a:focus,
+a.active {
+    opacity: 1;
+}
+
