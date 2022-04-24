@@ -1,0 +1,45 @@
+@use "sass:math";
+// The default font size for html is 16px
+$browser-context: 16;
+// Replace rem to rem with this function
+@function rem($pixels, $context: $browser-context) {
+  @return (math.div($pixels, $context)) * 1rem;
+}
+
+// Breakpoints
+@mixin laptop {
+  @media (max-width: rem(992)) { @content; }
+}
+
+@mixin phone {
+  @media (max-width: rem(480)) { @content; }
+}
+// COLORS
+$primary-color: #43A2A4;
+$secondary-color: #2E2E2E;
+$border-color: #D5D5D5;
+// FONT WEIGHT
+$fw-300: 300;
+$fw-400: 400;
+$fw-500: 500;
+$fw-600: 600;
+
+
+
+
+// RESETS
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a,
+a:visited,
+a:link {
+    text-decoration: none;
+}
+
+

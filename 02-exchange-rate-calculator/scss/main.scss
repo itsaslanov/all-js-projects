@@ -1,0 +1,9 @@
+@use './base' as base;
+@use './components' as component;
+@use './layout' as layout;
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: base.$primary-color;
+}
+

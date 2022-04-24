@@ -1,0 +1,217 @@
+@use "./base" as *;
+
+.container {
+  &--white {
+    background-color: #fff;
+    padding: rem(40) rem(50);
+    border-bottom-left-radius: rem(50);
+    border-bottom-right-radius: rem(50);
+    @include laptop {
+      padding: rem(20) rem(20);
+      padding-bottom: rem(40);
+      border-bottom-left-radius: rem(30);
+      border-bottom-right-radius: rem(30);
+    }
+  }
+
+  &__navbar {
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      text-transform: uppercase;
+      font-size: rem(24);
+      color: $primary-color;
+      font-weight: $fw-500;
+      @include phone {
+        font-size: rem(20);
+      }
+    }
+
+    div > img {
+      width: rem(40);
+      cursor: pointer;
+      @include phone {
+        width: rem(30);
+      }
+    }
+  }
+
+  &__show-result {
+    text-align: center;
+    padding: rem(55) 0;
+
+    h3 {
+      opacity: 0.4;
+      color: $secondary-color;
+      text-transform: uppercase;
+      font-weight: $fw-400;
+      font-size: rem(16);
+    }
+
+    .rate {
+      font-size: rem(45);
+      font-weight: $fw-500;
+      color: $secondary-color;
+      letter-spacing: rem(2);
+
+      @include phone {
+        font-size: rem(35);
+      }
+    }
+  }
+
+  &__currency-rate {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    gap: rem(10);
+
+    @include laptop {
+      display: block;
+      border: 1px solid $border-color;
+      width: fit-content;
+      margin: 0 auto;
+      border-radius: 20px;
+      z-index: 1;
+    }
+
+    @include phone {
+      width: 100%;
+    }
+
+    .container__currency {
+      position: relative;
+      width: rem(400);
+      @include laptop {
+        margin: 0 auto;
+      }
+
+      @include phone {
+        width: 100%;
+      }
+
+      input {
+        padding: rem(15) rem(20);
+        width: 100%;
+        border-radius: 20px;
+        border: 1px solid $border-color;
+        font-size: rem(15);
+        outline: none;
+
+        &:first-child {
+          @include laptop {
+            margin-top: rem(10);
+          }
+        }
+
+        &:last-child {
+          @include laptop {
+            margin-bottom: rem(10);
+          }
+        }
+
+        @include laptop {
+          border: 0px;
+          margin-top: rem(10);
+        }
+
+        &:focus-within {
+          border: 1px solid $primary-color;
+          @include laptop {
+            border: 0;
+          }
+        }
+      }
+
+      select {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        background-color: #fff;
+        color: #2e2e2e;
+        font-weight: 500;
+        border: 0;
+        padding: 7px;
+        font-size: 0.9375rem;
+        transform: translate(0, -55%);
+      }
+    }
+  }
+
+  .btn {
+    padding: rem(8) rem(18);
+    border: 0;
+    border-radius: 15px;
+    background-color: $primary-color;
+    box-shadow: 0px 0px 5px $primary-color;
+    // border: 3px solid #318183;
+    cursor: pointer;
+    @include laptop {
+      display: block;
+      margin: 0 auto;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+
+    &:focus,
+    &:hover {
+      background-color: #61a7a8;
+    }
+
+    img {
+      width: rem(20);
+    }
+  }
+
+  &__description {
+    padding: rem(60) rem(50);
+    color: #fff;
+
+    @include phone {
+      padding: rem(40) rem(20);
+    }
+
+    div {
+      margin-bottom: rem(20);
+    }
+
+    h3 {
+      font-weight: $fw-500;
+      margin-bottom: rem(5);
+      font-size: rem(20);
+      text-transform: uppercase;
+      @include laptop {
+        font-size: rem(18);
+      }
+    }
+
+    p {
+      font-weight: $fw-300;
+      font-size: rem(18);
+      @include laptop {
+        font-size: rem(16);
+        line-height: 1.6;
+      }
+    }
+  }
+
+  .hr {
+    display: none;
+    @include laptop {
+      display: block;
+      width: 90%;
+      background-color: #d5d5d5;
+      height: 0.0625rem;
+      z-index: -1;
+      position: absolute;
+      display: block;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
